@@ -2,22 +2,16 @@ version : '2'
 
 services:
   jenkins:
-    #image : 'jenkins/jenkins:2.60.3' 
+    #image : 'jenkins/jenkins:2.60.3' for use Java 
     image : 'jenkins/jenkins:jdk11'
     container_name : 'jenkins'
     user : 'root'
     restart: always
     ports:
       - '8080:8080'
-      - '9148:9148'
       - '50000:50000'
-      - '22:22'
-      - '443:443'
     volumes:
       - ./jenkins:/var/jenkins_home
       - /var/run/docker.sock:/var/run/docker.sock
       #ssh key
       - ./ssh:/root/.ssh
-networks:
-  dockernet:
-    external: true
