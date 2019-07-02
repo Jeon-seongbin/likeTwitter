@@ -1,5 +1,16 @@
 # likeTwitter
 
+ツイッターの偽物作りプロジェット
+7月から始める
+
+技術スタック<br>
+1. Docker
+2. Django
+3. React
+4. Gitlab
+5. GitKraken
+
+
 Use docker
 <br>2019/05/17
 1. https://docs.docker.com/compose/django/
